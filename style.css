@@ -47,15 +47,16 @@ body {
 header {
   background-color: white;
   padding: 32px 64px;
+  display: flex;
 }
 
 .dados {
-  display: inline-block;
   padding-bottom: 12px;
 }
 
 .foto {
   width: 200px;
+  height: 200px;
   border: 4px solid #ffc700;
   border-radius: 50%;
   margin-bottom: -90px;
