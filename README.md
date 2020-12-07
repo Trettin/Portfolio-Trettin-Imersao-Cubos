@@ -1,2 +1,2 @@
-# portifolio
+# portfolio
 Created with CodeSandbox
