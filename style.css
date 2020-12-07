@@ -199,10 +199,12 @@ main {
   margin-top: 16px;
   margin-bottom: 24px;
   font-weight: normal;
+  width: 360px;
+  height: 110px;
 }
 
 .projeto img {
-  width: 350px;
+  width: 100%;
   display: block;
 }
 
