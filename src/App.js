@@ -253,7 +253,7 @@ function App() {
               src="https://i.imgur.com/bUt3lLe.jpg"
               alt="imagem casa criativa"
             />
-            <a href="https://criativacasa.netlify.app/" target="_blank"
+            <a href="https://criativacasa.netlify.app/" target="_blank" rel='noreferrer'
               >Ver projeto</a
             >
           </div>
@@ -268,7 +268,7 @@ function App() {
               src="https://imgur.com/QkKhvrv.jpg"
               alt="imagem capa annabella"
             />
-            <a href="https://bellaanna.netlify.app" target="_blank"
+            <a href="https://bellaanna.netlify.app" target="_blank" rel='noreferrer'
               >Ver projeto</a
             >
           </div>
