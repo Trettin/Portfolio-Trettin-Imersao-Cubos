@@ -1,24 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Trettin - Portfólio</title>
-  </head>
+import './App.css';
 
-  <body>
-    <header>
+function App() {
+  return (
+    <div className="App">
+      <header>
       <img
         class="foto"
         src="https://i.imgur.com/cV2yCmQ.png"
-        alt="minha foto"
+        alt="Foto de Gabriel Trettin"
       />
 
       <div class="dados">
@@ -290,5 +279,8 @@
     <footer>
       Projeto desenvolvido durante a imersão da Cubos Academy 2020
     </footer>
-  </body>
-</html>
+    </div>
+  );
+}
+
+export default App;

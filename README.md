@@ -2,4 +2,4 @@
 
 # Portfolio criado durante a Imersão Cubos Academy
 
-Created with CodeSandbox
+# Atualizado durante o curso Programação do Zero da Cubos Academy
