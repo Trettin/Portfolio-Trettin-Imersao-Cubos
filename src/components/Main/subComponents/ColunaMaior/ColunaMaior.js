@@ -172,8 +172,8 @@ export default function ColunaMaior() {
                 <div className="projeto">
                     <h3>Anna Bella</h3>
                     <p>
-                        Site fictício p/ modeleo fictícia Anna Bella produzido durante o
-                        curso Desenvolvimento Web Cmpleto 2020
+                        Site fictício p/ modelo fictícia Anna Bella produzido durante o
+                        curso Desenvolvimento Web Completo 2020
                     </p>
                     <img src="https://imgur.com/QkKhvrv.jpg" alt="imagem capa annabella"/>
                     <a href="https://bellaanna.netlify.app" target="_blank" rel='noreferrer'>Ver projeto</a>
