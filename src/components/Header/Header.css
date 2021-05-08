@@ -1,0 +1,74 @@
+header {
+  background: url("https://i.pinimg.com/originals/f4/14/b1/f414b1a69df82ce79b5b7f417848fd3d.jpg"),
+    white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 32px 64px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border: 4px solid #6a00f4;
+  border-radius: 50%;
+  margin-bottom: -90px;
+  margin-right: 24px;
+}
+
+.dados {
+  padding-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  position: absolute;
+  left: 300px;
+  bottom: 25px;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 54px;
+  color: white;
+}
+
+.profissao {
+  font-size: 24px;
+}
+
+#ptit {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 700px) {
+  header {
+    position: unset;
+    display: grid;
+    grid-template-areas: "dados" "foto";
+    padding: 32px 24px;
+  }
+
+  .foto {
+    width: 200px;
+    height: 200px;
+    border: 4px solid #6a00f4;
+    border-radius: 50%;
+    margin-bottom: -90px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: foto;
+  }
+
+  .dados {
+    padding-bottom: 12px;
+    display: unset;
+    flex-direction: unset;
+    justify-content: unset;
+    position: unset;
+    left: unset;
+    bottom: unset;
+    grid-area: dados;
+  }
+}
