@@ -131,7 +131,7 @@ export default function ColunaMaior() {
                         </li>
 
                         <li>
-                            <p className="nome">Gerencimamento de tempo</p>
+                            <p className="nome">Gerenciamento de tempo</p>
                             <div className="progresso">
                                 <div className="barra"></div>
                                 <div className="barra"></div>
