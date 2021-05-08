@@ -115,16 +115,16 @@
     margin-left: unset;
   }
 
+  .coluna_maior h2 {
+    margin-left: 0;
+  }
+
   .habilidade {
-    background-color: white;
-    border-radius: 8px;
-    padding: 24px;
     margin: 12px auto;
-    width: 288px;
     text-align: left;
   }
 
-  .coluna_maior h2 {
-    margin-left: 0;
+  .projeto {
+    text-align: left;
   }
 }
