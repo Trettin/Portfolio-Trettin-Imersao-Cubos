@@ -12,16 +12,11 @@ p {
 
 h3,
 .conteudo span {
-  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
 .conteudo span {
   font-weight: normal;
-}
-
-p {
-  font-family: "Open Sans", sans-serif;
 }
 
 .t60 {
