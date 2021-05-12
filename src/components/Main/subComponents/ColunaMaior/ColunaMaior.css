@@ -70,6 +70,7 @@
   background-color: white;
   border-radius: 8px;
   margin: 12px;
+  display: grid;
 }
 
 .projeto h3 {
@@ -103,6 +104,8 @@
   margin-top: 24px;
   transition: 200ms;
   outline: none;
+  align-self: flex-end;
+  justify-self: left;
 }
 
 .projeto a:hover {
