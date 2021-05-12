@@ -1,4 +1,5 @@
 import './ColunaMaior.css'
+import cubosflix from '../../../../assets/cubosflix.jpg'
 
 export default function ColunaMaior() {
     return(
@@ -157,6 +158,15 @@ export default function ColunaMaior() {
 
             <h2 className="tituloprojetos">Projetos</h2>
             <div className="projetos">
+            <div className="projeto">
+                    <h3>Cubos Flix</h3>
+                    <p>
+                        Cubos Flix é um site fictício desenvolvido ao final do segundo módulo do curso Programação do Zero da Cubos Academy.
+                    </p>
+                    <img src={cubosflix} alt="imagem do site cubosflix"/>
+                    <a href="https://trettin-cubos-flix.netlify.app/" target="_blank" rel='noreferrer'>Ver projeto</a>
+                </div>
+
                 <div className="projeto">
                     <h3>Casa Criativa</h3>
                     <p>
