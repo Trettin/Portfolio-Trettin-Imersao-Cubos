@@ -19,7 +19,7 @@
   border-radius: 8px;
   padding: 24px;
   margin: 12px;
-  width: 288px;
+  width: 327px;
 }
 
 .habilidade h3 {
@@ -71,6 +71,7 @@
   border-radius: 8px;
   margin: 12px;
   display: grid;
+  grid-template-rows: min-content minmax(min-content, 1fr);
 }
 
 .projeto h3 {
@@ -88,6 +89,7 @@
 .projeto img {
   width: 100%;
   display: block;
+  align-self: flex-end;
 }
 
 .projeto a {
@@ -126,10 +128,13 @@
   .habilidade {
     margin: 12px auto;
     text-align: left;
-    width: 327px;
+    width: 100%;
   }
 
   .projeto {
     text-align: left;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 }

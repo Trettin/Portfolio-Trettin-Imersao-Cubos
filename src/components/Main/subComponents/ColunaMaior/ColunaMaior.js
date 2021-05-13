@@ -37,7 +37,7 @@ export default function ColunaMaior() {
                             <div className="progresso">
                                 <div className="barra"></div>
                                 <div className="barra"></div>
-                                <div className="barra incompleto"></div>
+                                <div className="barra"></div>
                                 <div className="barra incompleto"></div>
                                 <div className="barra incompleto"></div>
                             </div>
@@ -158,7 +158,7 @@ export default function ColunaMaior() {
 
             <h2 className="tituloprojetos">Projetos</h2>
             <div className="projetos">
-            <div className="projeto">
+                <div className="projeto">
                     <h3>Cubos Flix</h3>
                     <p>
                         Cubos Flix é um site fictício desenvolvido ao final do segundo módulo do curso Programação do Zero da Cubos Academy.
