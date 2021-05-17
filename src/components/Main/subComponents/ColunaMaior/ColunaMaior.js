@@ -162,12 +162,13 @@ export default function ColunaMaior() {
                     <h3>Cubos Flix</h3>
                     <p>
                         Cubos Flix é um site fictício desenvolvido ao final do segundo módulo do curso Programação do Zero da Cubos Academy.
+                        Site desenvolvido com React utilizando conceitos de componentização, hooks useState e useEffect, armazenamento de informações em localStorage.
                     </p>
                     <img src={cubosflix} alt="imagem do site cubosflix"/>
                     <a href="https://trettin-cubos-flix.netlify.app/" target="_blank" rel='noreferrer'>Ver projeto</a>
                 </div>
 
-                <div className="projeto">
+                {/* <div className="projeto">
                     <h3>Casa Criativa</h3>
                     <p>
                         Casa criativa é um site para se catalogar ideias com intuito de
@@ -177,17 +178,8 @@ export default function ColunaMaior() {
                     </p>
                     <img src="https://i.imgur.com/bUt3lLe.jpg" alt="imagem casa criativa"/>
                     <a href="https://criativacasa.netlify.app/" target="_blank" rel='noreferrer'>Ver projeto</a>
-                </div>
+                </div> */}
 
-                <div className="projeto">
-                    <h3>Anna Bella</h3>
-                    <p>
-                        Site fictício p/ modelo fictícia Anna Bella produzido durante o
-                        curso Desenvolvimento Web Completo 2020
-                    </p>
-                    <img src="https://imgur.com/QkKhvrv.jpg" alt="imagem capa annabella"/>
-                    <a href="https://bellaanna.netlify.app" target="_blank" rel='noreferrer'>Ver projeto</a>
-                </div>
             </div>
         </div>
     );
