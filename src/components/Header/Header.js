@@ -1,5 +1,5 @@
 import './Header.css'
-import GabrielProfile from '../../assets/Gabriel-profile.jpeg';
+import GabrielProfile from '../../assets/images/Gabriel-profile.jpeg';
 
 export default function Header() {
     return(

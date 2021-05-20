@@ -1,6 +1,6 @@
 import './Main.css';
-import ColunaMenor from './subComponents/ColunaMenor/ColunarMenor';
-import ColunaMaior from './subComponents/ColunaMaior/ColunaMaior';
+import ColunaMenor from '../ColunaMenor/ColunarMenor';
+import ColunaMaior from '../ColunaMaior/ColunaMaior';
 
 
 export default function Main() {

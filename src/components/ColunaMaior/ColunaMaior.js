@@ -1,5 +1,5 @@
 import './ColunaMaior.css'
-import cubosflix from '../../../../assets/cubosflix.jpg'
+import cubosflix from '../../assets/images/cubosflix.jpg'
 
 export default function ColunaMaior() {
     return(

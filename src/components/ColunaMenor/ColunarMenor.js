@@ -1,6 +1,6 @@
 import './ColunaMenor.css';
-import psicologia from '../../../../assets/psicologia.jpg';
-import cubos from '../../../../assets/cubos.png';
+import psicologia from '../../assets/images/psicologia.jpg';
+import cubos from '../../assets/images/cubos.png';
 
 
 export default function ColunaMenor() {
