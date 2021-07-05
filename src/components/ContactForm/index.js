@@ -13,7 +13,7 @@ export default function ContactForm() {
     const newFrom = data.name + " " + data.from;
     const { name, from, ...dataLessNameFrom } = { ...data };
     try {
-      const response = await fetch("http://localhost:8000/", {
+      const response = await fetch("https://trettin-dev.herokuapp.com/", {
         method: "POST",
         body: JSON.stringify({ from: newFrom, ...dataLessNameFrom }),
         headers: {
