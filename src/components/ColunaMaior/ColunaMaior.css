@@ -84,24 +84,39 @@
   margin-bottom: 24px;
   font-weight: normal;
   width: auto;
+  font-size: 0.95rem;
 }
 
 .projeto img {
   width: 100%;
   display: block;
   align-self: flex-end;
+  margin-top: 1rem;
 }
 
-.projeto a {
-  display: inline-block;
+a {
   text-decoration: none;
+}
+
+.github {
+  color: black;
+  font-size: 0.875rem;
+  display: inline;
+}
+
+.github:hover {
+  text-decoration: underline;
+}
+
+a.link_button {
+  display: inline-block;
   background-color: #2d00f7;
   color: white;
   padding: 8px 24px;
-  font-family: "Open Sans", sans-serif;
-  border-radius: 4px;
+  font-family: "Montserrat", "Open Sans", sans-serif;
+  border-radius: 6px;
   border: none;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   margin-top: 24px;
   transition: 200ms;
@@ -110,9 +125,8 @@
   justify-self: left;
 }
 
-.projeto a:hover {
+a.link_button:hover {
   background-color: #a100f2;
-  text-decoration: none;
   cursor: pointer;
 }
 
