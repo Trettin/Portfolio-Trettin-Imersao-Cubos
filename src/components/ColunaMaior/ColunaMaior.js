@@ -178,7 +178,7 @@ export default function ColunaMaior() {
           </a>
           <a
             className="github"
-            href="https://github.com/Trettin/Cubos-Academy-Modulo-03-Desafio/tree/main/back-end"
+            href="https://github.com/Trettin/Market-Cubos-Desafio3-Back"
             target="_blank"
             rel="noreferrer"
           >
