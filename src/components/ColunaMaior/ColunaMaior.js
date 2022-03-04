@@ -49,6 +49,17 @@ export default function ColunaMaior() {
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
+                <div className="barra"></div>
+                <div className="barra incompleto"></div>
+                <div className="barra incompleto"></div>
+              </div>
+            </li>
+            {/* Angular */}
+            <li>
+              <p className="nome">Angular</p>
+              <div className="progresso">
+                <div className="barra"></div>
+                <div className="barra"></div>
                 <div className="barra incompleto"></div>
                 <div className="barra incompleto"></div>
                 <div className="barra incompleto"></div>
@@ -82,9 +93,9 @@ export default function ColunaMaior() {
                 <div className="barra incompleto"></div>
               </div>
             </li>
-            {/* PHP */}
+            {/* Java */}
             <li>
-              <p className="nome">PHP</p>
+              <p className="nome">Java</p>
               <div className="progresso">
                 <div className="barra incompleto"></div>
                 <div className="barra incompleto"></div>
@@ -93,9 +104,9 @@ export default function ColunaMaior() {
                 <div className="barra incompleto"></div>
               </div>
             </li>
-            {/* mySQL */}
+            {/* C# */}
             <li>
-              <p className="nome">mySQL</p>
+              <p className="nome">C#</p>
               <div className="progresso">
                 <div className="barra incompleto"></div>
                 <div className="barra incompleto"></div>
