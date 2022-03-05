@@ -5,7 +5,7 @@ import marketCubos from "../../assets/images/market-cubos.jpg";
 export default function ColunaMaior() {
   return (
     <div className="coluna_maior">
-      <h2>Habilidades</h2>
+      <h2>Skills</h2>
       <div className="habilidades">
         <div className="habilidade">
           <h3>Front</h3>
@@ -122,7 +122,7 @@ export default function ColunaMaior() {
           <h3>Soft skills</h3>
           <ul>
             <li>
-              <p className="nome">Comunicação</p>
+              <p className="nome">Communication</p>
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
@@ -133,7 +133,7 @@ export default function ColunaMaior() {
             </li>
 
             <li>
-              <p className="nome">Trabalho em equipe</p>
+              <p className="nome">Team work</p>
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
@@ -144,7 +144,7 @@ export default function ColunaMaior() {
             </li>
 
             <li>
-              <p className="nome">Gerenciamento de tempo</p>
+              <p className="nome">Time management</p>
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
@@ -155,7 +155,7 @@ export default function ColunaMaior() {
             </li>
 
             <li>
-              <p className="nome">Gestão de conflitos</p>
+              <p className="nome">Conflict management</p>
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
@@ -173,11 +173,12 @@ export default function ColunaMaior() {
         <div className="projeto">
           <h3>Market Cubos</h3>
           <p>
-            Projeto final do módulo 3 do curso Programação do Zero da Cubos
-            Academy. No front-end foi utilizado React com as bibliotecas
-            react-hook-form, react-router-dom, react-use e material-ui. No
-            back-end foi utilizado o Node com as bibliotecas express, bcrypt,
-            json-webtoken, cors, dotenv e pg. O banco de dados foi o PostgreSQL.
+            Final project of module 3 of the 'Programming from Scratch' course
+            at Cubos Academy. On the front-end, React was used with the
+            react-hook-form, react-router-dom, react-use and material-ui
+            libraries. In the back-end, Node was used with the express, bcrypt,
+            json-webtoken, cors, dotenv and pg libraries. The database was
+            PostgreSQL.
           </p>
           <a
             className="github"
@@ -185,7 +186,7 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            Ver no Github: Front-end
+            See on Github: Front-end
           </a>
           <a
             className="github"
@@ -193,7 +194,7 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            Ver no Github: Back-end
+            See on Github: Back-end
           </a>
           <img src={marketCubos} alt="imagem do site market-cubos" />
           <a
@@ -202,18 +203,17 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            Ver projeto
+            See Project
           </a>
         </div>
 
         <div className="projeto">
           <h3>Cubos Flix</h3>
           <p>
-            Cubos Flix é um site fictício desenvolvido ao final do segundo
-            módulo do curso Programação do Zero da Cubos Academy. Site
-            desenvolvido com React utilizando conceitos de componentização,
-            hooks useState e useEffect, armazenamento de informações em
-            localStorage.
+            Cubos Flix is a fictional website developed at the end of the second
+            Cubes Academy's Zero Programming course module. site developed with
+            React using componentization concepts, hooks useState and useEffect,
+            storing information in localStorage.
           </p>
           <a
             className="github"
@@ -221,7 +221,7 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            Ver no Github
+            See on Github
           </a>
           <img src={cubosflix} alt="imagem do site cubosflix" />
           <a
@@ -230,21 +230,31 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            Ver projeto
+            See Project
           </a>
         </div>
 
         {/* <div className="projeto">
-                    <h3>Casa Criativa</h3>
-                    <p>
-                        Casa criativa é um site para se catalogar ideias com intuito de
-                        tornar o período de isolamento social, devido ao Covid19, mais
-                        interessante. <br />
-                        Projeto desenvolvio no WorkshopDev Especial da Rocketseat.
-                    </p>
-                    <img src="https://i.imgur.com/bUt3lLe.jpg" alt="imagem casa criativa"/>
-                    <a href="https://criativacasa.netlify.app/" target="_blank" rel='noreferrer'>Ver projeto</a>
-                </div> */}
+          <h3>Casa Criativa</h3>
+          <p>
+            Casa criativa é um site para se catalogar ideias com intuito de
+            tornar o período de isolamento social, devido ao Covid19, mais
+            interessante. <br />
+            Projeto desenvolvio no WorkshopDev Especial da Rocketseat.
+          </p>
+          <img
+            src="https://i.imgur.com/bUt3lLe.jpg"
+            alt="imagem casa criativa"
+          />
+          <a
+            className="link_button"
+            href="https://criativacasa.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver projeto
+          </a>
+        </div> */}
       </div>
     </div>
   );
