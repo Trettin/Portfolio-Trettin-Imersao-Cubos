@@ -77,7 +77,7 @@ export default function ColunaMaior() {
               <div className="progresso">
                 <div className="barra"></div>
                 <div className="barra"></div>
-                <div className="barra incompleto"></div>
+                <div className="barra"></div>
                 <div className="barra incompleto"></div>
                 <div className="barra incompleto"></div>
               </div>
