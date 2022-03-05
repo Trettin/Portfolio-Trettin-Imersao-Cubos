@@ -1,8 +1,92 @@
 import "./ColunaMaior.css";
 import cubosflix from "../../assets/images/cubosflix.jpg";
 import marketCubos from "../../assets/images/market-cubos.jpg";
+import GitHubIcon from "@mui/icons-material/GitHub";
+
+import { styled } from "@mui/material/styles";
+import LinearProgress, {
+  linearProgressClasses,
+} from "@mui/material/LinearProgress";
 
 export default function ColunaMaior() {
+  const front = [
+    {
+      name: "HTML",
+      lvl: 60,
+    },
+    {
+      name: "CSS",
+      lvl: 60,
+    },
+    {
+      name: "Java Script",
+      lvl: 60,
+    },
+    {
+      name: "React",
+      lvl: 60,
+    },
+    {
+      name: "Angular",
+      lvl: 40,
+    },
+  ];
+
+  const back = [
+    {
+      name: "Node.js",
+      lvl: 60,
+    },
+    {
+      name: "PostgresSQL",
+      lvl: 60,
+    },
+    {
+      name: "Typescript",
+      lvl: 40,
+    },
+    {
+      name: "Java",
+      lvl: 0,
+    },
+    {
+      name: "C#",
+      lvl: 0,
+    },
+  ];
+
+  const soft = [
+    {
+      name: "Communication",
+      lvl: 80,
+    },
+    {
+      name: "Team work",
+      lvl: 70,
+    },
+    {
+      name: "Time management",
+      lvl: 70,
+    },
+    {
+      name: "Conflict management",
+      lvl: 75,
+    },
+  ];
+
+  const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
+    height: 4,
+    borderRadius: 5,
+    [`&.${linearProgressClasses.colorPrimary}`]: {
+      backgroundColor: "#a100f233",
+      // theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
+    },
+    [`& .${linearProgressClasses.bar}`]: {
+      borderRadius: 5,
+      backgroundColor: theme.palette.mode === "light" ? "#a100f2" : "#308fe8",
+    },
+  }));
+
   return (
     <div className="coluna_maior">
       <h2>Skills</h2>
@@ -10,160 +94,51 @@ export default function ColunaMaior() {
         <div className="habilidade">
           <h3>Front</h3>
           <ul>
-            {/* HTML */}
-            <li>
-              <p className="nome">HTML</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* CSS */}
-            <li>
-              <p className="nome">CSS</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* JS */}
-            <li>
-              <p className="nome">Java Script</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* React */}
-            <li>
-              <p className="nome">React</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* Angular */}
-            <li>
-              <p className="nome">Angular</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
+            {front.map((skill) => {
+              return (
+                <li>
+                  <p className="nome">{skill.name}</p>
+                  <BorderLinearProgress
+                    variant="determinate"
+                    value={skill.lvl}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
 
         <div className="habilidade">
           <h3>Back</h3>
           <ul>
-            {/* Node */}
-            <li>
-              <p className="nome">Node.js</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* PostgresSQL */}
-            <li>
-              <p className="nome">PostgresSQL</p>
-              <div className="progresso">
-                <div className="barra "></div>
-                <div className="barra "></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* Java */}
-            <li>
-              <p className="nome">Java</p>
-              <div className="progresso">
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-            {/* C# */}
-            <li>
-              <p className="nome">C#</p>
-              <div className="progresso">
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
+            {back.map((skill) => {
+              return (
+                <li>
+                  <p className="nome">{skill.name}</p>
+                  <BorderLinearProgress
+                    variant="determinate"
+                    value={skill.lvl}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
 
         <div className="habilidade">
           <h3>Soft skills</h3>
           <ul>
-            <li>
-              <p className="nome">Communication</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-
-            <li>
-              <p className="nome">Team work</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-
-            <li>
-              <p className="nome">Time management</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra incompleto"></div>
-              </div>
-            </li>
-
-            <li>
-              <p className="nome">Conflict management</p>
-              <div className="progresso">
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-                <div className="barra"></div>
-              </div>
-            </li>
+            {soft.map((skill) => {
+              return (
+                <li>
+                  <p className="nome">{skill.name}</p>
+                  <BorderLinearProgress
+                    variant="determinate"
+                    value={skill.lvl}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>
@@ -180,22 +155,25 @@ export default function ColunaMaior() {
             json-webtoken, cors, dotenv and pg libraries. The database was
             PostgreSQL.
           </p>
-          <a
-            className="github"
-            href="https://github.com/Trettin/Market-Cubos-Desafio03-front"
-            target="_blank"
-            rel="noreferrer"
-          >
-            See on Github: Front-end
-          </a>
-          <a
-            className="github"
-            href="https://github.com/Trettin/Market-Cubos-Desafio3-Back"
-            target="_blank"
-            rel="noreferrer"
-          >
-            See on Github: Back-end
-          </a>
+          <div className="project-github-links">
+            <a
+              className="github"
+              href="https://github.com/Trettin/Market-Cubos-Desafio03-front"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon fontSize="large" /> Front-end
+            </a>
+            <a
+              className="github"
+              href="https://github.com/Trettin/Market-Cubos-Desafio3-Back"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitHubIcon fontSize="large" /> Back-end
+            </a>
+          </div>
+
           <img src={marketCubos} alt="imagem do site market-cubos" />
           <a
             className="link_button"
@@ -221,7 +199,7 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            See on Github
+            <GitHubIcon fontSize="large" /> Front-end
           </a>
           <img src={cubosflix} alt="imagem do site cubosflix" />
           <a

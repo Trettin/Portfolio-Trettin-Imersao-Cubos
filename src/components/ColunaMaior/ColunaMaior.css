@@ -29,6 +29,7 @@
 
 .habilidade p {
   font-size: 20px;
+  margin-bottom: 12px;
 }
 
 .progresso {
@@ -39,12 +40,17 @@
 .barra {
   width: 20%;
   height: 4px;
-  background-color: #a100f2;
+  background-color: #a100f233;
+  opacity: 0.2;
   margin-top: 8px;
 }
 
 .incompleto {
   opacity: 0.2;
+}
+
+.up {
+  opacity: 1;
 }
 
 .coluna_maior li {
@@ -87,6 +93,11 @@
   font-size: 0.95rem;
 }
 
+.project-github-links {
+  display: flex;
+  gap: 12px;
+}
+
 .projeto img {
   width: 100%;
   display: block;
@@ -101,7 +112,10 @@ a {
 .github {
   color: black;
   font-size: 0.875rem;
-  display: inline;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 2px 0;
 }
 
 .github:hover {
