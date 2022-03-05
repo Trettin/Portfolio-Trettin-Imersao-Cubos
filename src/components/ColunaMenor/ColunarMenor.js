@@ -42,7 +42,9 @@ export default function ColunaMenor() {
       </div>
 
       <div className="formacao">
-        <h2>{t("academic-education")}</h2>
+        <h2>
+          {t("academic")} <br /> {t("education")}
+        </h2>
         <div className="linha"></div>
         <ul>
           <li>
