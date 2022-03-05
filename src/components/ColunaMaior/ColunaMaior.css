@@ -20,6 +20,7 @@
   padding: 24px;
   margin: 12px;
   width: 327px;
+  height: min-content;
 }
 
 .habilidade h3 {
@@ -78,6 +79,7 @@
   margin: 12px;
   display: grid;
   grid-template-rows: min-content minmax(min-content, 1fr);
+  height: min-content;
 }
 
 .projeto h3 {

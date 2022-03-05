@@ -45,14 +45,6 @@ export default function ColunaMaior() {
       name: "Typescript",
       lvl: 40,
     },
-    {
-      name: "Java",
-      lvl: 0,
-    },
-    {
-      name: "C#",
-      lvl: 0,
-    },
   ];
 
   const soft = [
@@ -96,7 +88,7 @@ export default function ColunaMaior() {
           <ul>
             {front.map((skill) => {
               return (
-                <li>
+                <li key={skill.name}>
                   <p className="nome">{skill.name}</p>
                   <BorderLinearProgress
                     variant="determinate"
@@ -113,7 +105,7 @@ export default function ColunaMaior() {
           <ul>
             {back.map((skill) => {
               return (
-                <li>
+                <li key={skill.name}>
                   <p className="nome">{skill.name}</p>
                   <BorderLinearProgress
                     variant="determinate"
@@ -130,7 +122,7 @@ export default function ColunaMaior() {
           <ul>
             {soft.map((skill) => {
               return (
-                <li>
+                <li key={skill.name}>
                   <p className="nome">{skill.name}</p>
                   <BorderLinearProgress
                     variant="determinate"
@@ -143,7 +135,7 @@ export default function ColunaMaior() {
         </div>
       </div>
 
-      <h2 className="tituloprojetos">Projetos</h2>
+      <h2 className="tituloprojetos">Projects</h2>
       <div className="projetos">
         <div className="projeto">
           <h3>Market Cubos</h3>

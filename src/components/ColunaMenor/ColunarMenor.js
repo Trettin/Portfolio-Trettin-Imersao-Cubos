@@ -39,7 +39,9 @@ export default function ColunaMenor() {
       </div>
 
       <div className="formacao">
-        <h2>Academic Education</h2>
+        <h2>
+          Academic <br /> Education
+        </h2>
         <div className="linha"></div>
         <ul>
           <li>

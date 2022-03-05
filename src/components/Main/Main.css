@@ -1,16 +1,22 @@
 main {
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
   padding: 40px 70px;
   display: flex;
 }
 
 @media (max-width: 700px) {
-  main {
+  .main-content {
     display: grid;
     grid-template-areas: "habilidades";
     padding: 100px 12px 50px 12px;
     justify-items: center;
     text-align: center;
   }
+
   .coluna_maior {
     grid-area: habilidades;
   }
