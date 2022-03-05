@@ -24,15 +24,15 @@ export default function Header() {
 
   const handleChange = (e) => {
     const langDict = {
-      English: "en",
-      Portuguese: "pt",
-      Deutsch: "de",
+      english: "en",
+      portuguese: "pt",
+      deutsch: "de",
     };
     console.log(e);
 
-    console.log(langDict[e]);
-    setLanguage(e.target.value);
-    changeLanguage(langDict[e]);
+    console.log(langDict[e.toLowerCase()]);
+    setLanguage(e);
+    changeLanguage(langDict[e.toLowerCase()]);
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Header() {
           <div className="dados">
             <h1>Gabriel Trettin</h1>
             <p id="ptit" className="profissao t60">
-              Full-stack Developer
+              {t("title")}
               <a href="https://github.com/Trettin/" target="_blank">
                 <GitHubIcon fontSize="large" style={{ fill: "black" }} />
               </a>
@@ -58,13 +58,18 @@ export default function Header() {
           <div className="select-language">
             <InputLabel
               id="demo-controlled-open-select-label"
-              className="filterButton "
+              className="lang-label"
               onClick={handleOpen}
+              style={{
+                padding: "5px 12px",
+                fontWeight: "600",
+                color: "#a100f2",
+              }}
             >
               {language}
             </InputLabel>
             <Select
-              className=""
+              className="hide"
               labelId="demo-controlled-open-select-label"
               id="demo-controlled-open-select"
               open={open}
@@ -73,15 +78,8 @@ export default function Header() {
               onOpen={handleOpen}
               onChange={(e) => handleChange(e.target.value)}
             >
-              <MenuItem value="English" name="English">
-                English
-              </MenuItem>
-              <MenuItem value="Deutch" name="Deutch">
-                Deutsch
-              </MenuItem>
-              <MenuItem value="Portuguese" name="Portuguese">
-                Portuguese
-              </MenuItem>
+              <MenuItem value="English">English</MenuItem>
+              <MenuItem value="Portuguese">Portuguese</MenuItem>
             </Select>
           </div>
         </div>

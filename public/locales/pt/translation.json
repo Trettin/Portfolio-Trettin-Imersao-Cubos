@@ -1,0 +1,24 @@
+{
+    "title": "Desenvolvedor Full-stack",
+    "skills": "Habilidades",
+    "softskills": {
+        "communication": "Comunicação",
+        "team work": "Trabalho em equipe",
+        "time management": "Gerenciamento de tempo",
+        "conflict management": "Gerenciamento de conflitos"
+    },
+    "projects": "Projetos",
+    "mkt-description": "Projeto final do módulo 3 do curso Programação do Zero na Cubos Academy. No front-end React foi usado com as bibliotecas react-hook-form,  react-router-dom, react-use e material-ui. No back-end, o Node foi usado com as bibliotecas express, bcrypt, json-webtoken, cors, dotenv e pg. O banco de dados foi o PostgreSQL.",
+    "cubos-flix-description": "Cubos Flix é um site fictício desenvolvido no final do segundo módulo do curso Programação do zero da Cubos Academy. Este site foi desenvolvido com React utilizando conceitos de componentização, hooks useState e useEffect, armazenando informações no localStorage.",
+    "see-project": "Ver projeto",
+    "professional-experiences": "Experiências Profissionais",
+    "developer": "Desenvolvedor de software",
+    "psychologist": "Psicólogo",
+    "self-employed": "Autônomo",
+    "current": "Atual",
+    "academic-education": "Formação \n Acadêmica",
+    "programming-from-scratch": "Programação do zero",
+    "specialization": "Especialização - Psicologia Integral",
+    "psychology": "Psicologia",
+    "last-update": "Atualizado em Março"
+}

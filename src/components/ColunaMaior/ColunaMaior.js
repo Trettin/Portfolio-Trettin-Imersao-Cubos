@@ -7,8 +7,10 @@ import { styled } from "@mui/material/styles";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import { useTranslation } from "react-i18next";
 
 export default function ColunaMaior() {
+  const { t } = useTranslation();
   const front = [
     {
       name: "HTML",
@@ -81,7 +83,7 @@ export default function ColunaMaior() {
 
   return (
     <div className="coluna_maior">
-      <h2>Skills</h2>
+      <h2>{t("skills")}</h2>
       <div className="habilidades">
         <div className="habilidade">
           <h3>Front</h3>
@@ -123,7 +125,9 @@ export default function ColunaMaior() {
             {soft.map((skill) => {
               return (
                 <li key={skill.name}>
-                  <p className="nome">{skill.name}</p>
+                  <p className="nome">
+                    {t(`softskills.${[skill.name.toLocaleLowerCase()]}`)}
+                  </p>
                   <BorderLinearProgress
                     variant="determinate"
                     value={skill.lvl}
@@ -135,18 +139,11 @@ export default function ColunaMaior() {
         </div>
       </div>
 
-      <h2 className="tituloprojetos">Projects</h2>
+      <h2 className="tituloprojetos">{t("projects")}</h2>
       <div className="projetos">
         <div className="projeto">
           <h3>Market Cubos</h3>
-          <p>
-            Final project of module 3 of the 'Programming from Scratch' course
-            at Cubos Academy. On the front-end, React was used with the
-            react-hook-form, react-router-dom, react-use and material-ui
-            libraries. In the back-end, Node was used with the express, bcrypt,
-            json-webtoken, cors, dotenv and pg libraries. The database was
-            PostgreSQL.
-          </p>
+          <p>{t("mkt-description")}</p>
           <div className="project-github-links">
             <a
               className="github"
@@ -173,18 +170,13 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            See Project
+            {t("see-project")}
           </a>
         </div>
 
         <div className="projeto">
           <h3>Cubos Flix</h3>
-          <p>
-            Cubos Flix is a fictional website developed at the end of the second
-            Cubes Academy's Zero Programming course module. site developed with
-            React using componentization concepts, hooks useState and useEffect,
-            storing information in localStorage.
-          </p>
+          <p>{t("cubos-flix-description")}</p>
           <a
             className="github"
             href="https://github.com/Trettin/cubos-flix"
@@ -200,7 +192,7 @@ export default function ColunaMaior() {
             target="_blank"
             rel="noreferrer"
           >
-            See Project
+            {t("see-project")}
           </a>
         </div>
 

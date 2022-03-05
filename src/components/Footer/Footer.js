@@ -1,5 +1,8 @@
 import "./Footer.css";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
-  return <footer>Tretin.Dev@gmail.com | Last Update March 2021</footer>;
+  const { t } = useTranslation();
+
+  return <footer>Tretin.Dev@gmail.com | {t("last-update")} 2021</footer>;
 }

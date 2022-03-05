@@ -19,8 +19,19 @@ header {
   right: 100px;
 }
 
+.lang-label {
+  border-radius: 50px;
+  background-color: white;
+  color: #a100f2;
+  font-weight: 500;
+  width: min-content;
+}
+
 .hide {
   visibility: hidden;
+  position: absolute;
+  top: -55px;
+  right: 25px;
 }
 
 .photo {
@@ -74,6 +85,28 @@ h1 {
     display: grid;
     grid-template-areas: "dados" "photo";
     padding: 32px 24px;
+  }
+
+  .select-language {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+  }
+
+  .lang-label {
+    border-radius: 50px;
+    background-color: white;
+    color: #a100f2;
+    font-weight: 500;
+    font-size: 0.8em;
+    width: min-content;
+  }
+
+  .hide {
+    visibility: hidden;
+    position: absolute;
+    top: -55px;
+    right: 25px;
   }
 
   .photo {
