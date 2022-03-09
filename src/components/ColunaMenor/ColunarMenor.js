@@ -23,6 +23,14 @@ export default function ColunaMenor() {
             </div>
           </li>
           <li>
+            <img src={cubos} alt="Cubos' logo" />
+            <div className="conteudo">
+              <h3>{t("class-monitor")}</h3>
+              <span className="span">Cubos Academy</span>
+              <p className="t60">10/2021 - {t("current")}</p>
+            </div>
+          </li>
+          <li>
             <img src={simbiose} alt="simbose ventures' logo" />
             <div className="conteudo">
               <h3>{t("developer")}</h3>
