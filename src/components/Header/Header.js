@@ -1,5 +1,5 @@
 import "./Header.css";
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import GabrielProfile from "../../assets/images/Gabriel-profile.jpeg";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -13,6 +13,8 @@ export default function Header() {
     t,
     i18n: { changeLanguage, language },
   } = useTranslation();
+  const containerRef1 = useRef(null);
+  const innerRef1 = useRef(null);
 
   const langDict = {
     english: "en",
@@ -47,11 +49,89 @@ export default function Header() {
     // eslint-disable-next-line
   }, []);
 
+  let counter = 0;
+  const updateRate = 10;
+
+  const isTimeToUpdate = function () {
+    return counter++ % updateRate === 0;
+  };
+
+  const mouse = {
+    _x: 0,
+    _y: 0,
+    x: 0,
+    y: 0,
+    updatePosition: function (event) {
+      var e = event || window.event;
+      this.x = e.clientX - this._x;
+      this.y = (e.clientY - this._y) * -1;
+    },
+    setOrigin: function (e) {
+      if (e) {
+        this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+        this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+        console.log(this._x, this._y);
+      }
+    },
+    show: function () {
+      return "(" + this.x + ", " + this.y + ")";
+    },
+  };
+  // Track the mouse position relative to the center of the container.
+  mouse.setOrigin(containerRef1.current);
+
+  const onMouseEnterHandler = function (event) {
+    update(event);
+  };
+  const onMouseLeaveHandler = function (innerRef) {
+    innerRef.current.style = "";
+  };
+  const onMouseMoveHandler = function (event, innerRef) {
+    if (isTimeToUpdate()) {
+      update(event, innerRef);
+    }
+  };
+
+  const update = function (event, innerRef) {
+    mouse.updatePosition(event);
+    if (innerRef) {
+      updateTransformStyle(
+        (mouse.y / innerRef.current.offsetHeight / 2).toFixed(2),
+        (mouse.x / innerRef.current.offsetWidth / 2).toFixed(2),
+        innerRef
+      );
+    }
+  };
+
+  const updateTransformStyle = function (x, y, innerRef) {
+    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+
+    innerRef.current.style.transform = style;
+    innerRef.current.style.webkitTransform = style;
+    innerRef.current.style.mozTransform = style;
+    innerRef.current.style.msTransform = style;
+    innerRef.current.style.oTransform = style;
+  };
+
   return (
     <Suspense fallback="loading">
       <header>
         <div className="header-content">
-          <img className="photo" src={GabrielProfile} alt="Gabriel Trettin" />
+          <div
+            ref={containerRef1}
+            id="outerPhoto"
+            onMouseEnter={(e) => onMouseEnterHandler(e)}
+            onMouseLeave={() => onMouseLeaveHandler(innerRef1)}
+            onMouseMove={(e) => onMouseMoveHandler(e, innerRef1)}
+          >
+            <img
+              ref={innerRef1}
+              id="inner"
+              className="photo"
+              src={GabrielProfile}
+              alt="Gabriel Trettin"
+            />
+          </div>
 
           <div className="dados">
             <h1>Gabriel Trettin</h1>

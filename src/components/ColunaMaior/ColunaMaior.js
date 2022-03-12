@@ -1,4 +1,5 @@
 import "./ColunaMaior.css";
+import { useRef, createRef } from "react";
 import cubosflix from "../../assets/images/cubosflix.jpg";
 import marketCubos from "../../assets/images/market-cubos.jpg";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -11,6 +12,10 @@ import { useTranslation } from "react-i18next";
 
 export default function ColunaMaior() {
   const { t } = useTranslation();
+  const containerRef1 = document.getElementById("outer");
+  const innerRef1 = document.getElementById("inner");
+  const containerRef2 = useRef(null);
+  const innerRef2 = useRef(null);
   const front = [
     {
       name: "HTML",
@@ -81,6 +86,72 @@ export default function ColunaMaior() {
     },
   }));
 
+  let counter = 0;
+  const updateRate = 10;
+
+  const isTimeToUpdate = function () {
+    return counter++ % updateRate === 0;
+  };
+
+  const mouse = {
+    _x: 0,
+    _y: 0,
+    x: 0,
+    y: 0,
+    updatePosition: function (event) {
+      var e = event || window.event;
+      this.x = e.clientX - this._x;
+      this.y = (e.clientY - this._y) * -1;
+    },
+    setOrigin: function (e) {
+      if (e) {
+        this._x = e.offsetLeft + Math.floor(e.offsetWidth / 2);
+        this._y = e.offsetTop + Math.floor(e.offsetHeight / 2);
+        // console.log(this._x, this._y);
+      }
+    },
+    show: function () {
+      return "(" + this.x + ", " + this.y + ")";
+    },
+  };
+  // Track the mouse position relative to the center of the container.
+  mouse.setOrigin(containerRef1);
+  // mouse.setOrigin(containerRef2.current);
+
+  const onMouseEnterHandler = function (event) {
+    console.log(containerRef1);
+    update(event);
+  };
+  const onMouseLeaveHandler = function (innerRef) {
+    if (innerRef1) innerRef1.style = "";
+  };
+  const onMouseMoveHandler = function (event, innerRef) {
+    if (isTimeToUpdate()) {
+      update(event, innerRef);
+    }
+  };
+
+  const update = function (event, innerRef) {
+    mouse.updatePosition(event);
+    if (innerRef) {
+      updateTransformStyle(
+        (mouse.y / innerRef1.offsetHeight / 2).toFixed(2),
+        (mouse.x / innerRef1.offsetWidth / 2).toFixed(2),
+        innerRef
+      );
+    }
+  };
+
+  const updateTransformStyle = function (x, y, innerRef) {
+    var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+
+    innerRef1.style.transform = style;
+    innerRef1.style.webkitTransform = style;
+    innerRef1.style.mozTransform = style;
+    innerRef1.style.msTransform = style;
+    innerRef1.style.oTransform = style;
+  };
+
   return (
     <div className="coluna_maior">
       <h2>{t("skills")}</h2>
@@ -141,59 +212,75 @@ export default function ColunaMaior() {
 
       <h2 className="tituloprojetos">{t("projects")}</h2>
       <div className="projetos">
-        <div className="projeto">
-          <h3>Market Cubos</h3>
-          <p>{t("mkt-description")}</p>
-          <div className="project-github-links">
+        <div
+          // ref={containerRef1}
+          id="outer"
+          onMouseEnter={(e) => onMouseEnterHandler(e)}
+          onMouseLeave={() => onMouseLeaveHandler(innerRef1)}
+          onMouseMove={(e) => onMouseMoveHandler(e, innerRef1)}
+        >
+          <div id="inner" className="projeto">
+            <h3>Market Cubos</h3>
+            <p>{t("mkt-description")}</p>
+            <div className="project-github-links">
+              <a
+                className="github"
+                href="https://github.com/Trettin/Market-Cubos-Desafio03-front"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHubIcon fontSize="large" /> Front-end
+              </a>
+              <a
+                className="github"
+                href="https://github.com/Trettin/Market-Cubos-Desafio3-Back"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <GitHubIcon fontSize="large" /> Back-end
+              </a>
+            </div>
+
+            <img src={marketCubos} alt="imagem do site market-cubos" />
+            <a
+              className="link_button"
+              href="https://market-cubos.trettin.dev.br/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("see-project")}
+            </a>
+          </div>
+        </div>
+
+        <div
+        // ref={containerRef2}
+        // id="outer"
+        // onMouseEnter={(e) => onMouseEnterHandler(e)}
+        // onMouseLeave={() => onMouseLeaveHandler(innerRef2)}
+        // onMouseMove={(e) => onMouseMoveHandler(e, innerRef2)}
+        >
+          <div className="projeto">
+            <h3>Cubos Flix</h3>
+            <p>{t("cubos-flix-description")}</p>
             <a
               className="github"
-              href="https://github.com/Trettin/Market-Cubos-Desafio03-front"
+              href="https://github.com/Trettin/cubos-flix"
               target="_blank"
               rel="noreferrer"
             >
               <GitHubIcon fontSize="large" /> Front-end
             </a>
+            <img src={cubosflix} alt="imagem do site cubosflix" />
             <a
-              className="github"
-              href="https://github.com/Trettin/Market-Cubos-Desafio3-Back"
+              className="link_button"
+              href="https://trettin-cubos-flix.netlify.app/"
               target="_blank"
               rel="noreferrer"
             >
-              <GitHubIcon fontSize="large" /> Back-end
+              {t("see-project")}
             </a>
           </div>
-
-          <img src={marketCubos} alt="imagem do site market-cubos" />
-          <a
-            className="link_button"
-            href="https://market-cubos.trettin.dev.br/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("see-project")}
-          </a>
-        </div>
-
-        <div className="projeto">
-          <h3>Cubos Flix</h3>
-          <p>{t("cubos-flix-description")}</p>
-          <a
-            className="github"
-            href="https://github.com/Trettin/cubos-flix"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GitHubIcon fontSize="large" /> Front-end
-          </a>
-          <img src={cubosflix} alt="imagem do site cubosflix" />
-          <a
-            className="link_button"
-            href="https://trettin-cubos-flix.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("see-project")}
-          </a>
         </div>
 
         {/* <div className="projeto">

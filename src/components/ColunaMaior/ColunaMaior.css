@@ -71,6 +71,10 @@
   flex-wrap: wrap;
 }
 
+#outer {
+  perspective: 40px;
+}
+
 .projeto {
   max-width: 360px;
   padding: 24px;

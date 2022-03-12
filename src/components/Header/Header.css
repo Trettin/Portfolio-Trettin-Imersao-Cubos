@@ -34,14 +34,20 @@ header {
   top: -55px;
   right: 25px;
 }
-
+#outerPhoto {
+  perspective: 40px;
+}
+#outerPhoto,
 .photo {
   width: 200px;
   height: 200px;
-  border: 4px solid #6a00f4;
   border-radius: 50%;
   margin-bottom: -90px;
   margin-right: 24px;
+}
+
+.photo {
+  border: 4px solid #6a00f4;
 }
 
 .dados {
