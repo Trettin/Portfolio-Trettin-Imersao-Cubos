@@ -17,22 +17,32 @@ header {
   position: absolute;
   top: 50px;
   right: 100px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-
+.MuiInputLabel-root {
+  height: 30.5px !important;
+  min-height: 30.5px !important;
+}
 .lang-label {
-  border-radius: 50px;
+  border-radius: 4px;
   background-color: white;
   color: #a100f2;
   font-weight: 500;
   width: min-content;
   cursor: pointer;
+  height: 30.5px !important;
+  min-height: 30.5px !important;
+}
+.lang-label img {
+  width: 30px;
 }
 
 .hide {
   visibility: hidden;
   position: absolute;
   top: -55px;
-  right: 25px;
 }
 
 .photo {
@@ -74,6 +84,20 @@ h1 {
 #ptit a {
   display: flex;
   align-items: center;
+}
+
+.MuiPaper-root {
+  width: min-content !important;
+  min-width: unset !important;
+}
+.MuiList-root {
+  padding: 0px !important;
+}
+.MuiMenuItem-root {
+  padding: 4px !important;
+}
+.MuiMenuItem-root img {
+  width: 30px;
 }
 
 @media (max-width: 700px) {

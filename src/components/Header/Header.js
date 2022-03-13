@@ -3,21 +3,20 @@ import React, { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import GabrielProfile from "../../assets/images/Gabriel-profile.jpeg";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { InputLabel, MenuItem, Select } from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [selectLanguage, setSelectLanguage] = useState("English");
+  const [selectedLanguage, setSelectedLanguage] = useState("us");
   const {
     t,
     i18n: { changeLanguage, language },
   } = useTranslation();
 
-  const langDict = {
-    english: "en",
-    portuguese: "pt",
-    deutsch: "de",
+  const countryLangDict = {
+    us: "en",
+    br: "pt",
   };
 
   const handleClose = () => {
@@ -29,8 +28,14 @@ export default function Header() {
   };
 
   const handleChange = (e) => {
-    setSelectLanguage(e);
-    changeLanguage(langDict[e.toLowerCase()]);
+    setSelectedLanguage(e);
+    changeLanguage(countryLangDict[e.toLowerCase()]);
+
+    console.log("handleChangeEvent", e);
+    console.log(
+      "handleChange changeLang value",
+      countryLangDict[e.toLowerCase()]
+    );
   };
 
   function getKeyByValue(object, value) {
@@ -38,12 +43,14 @@ export default function Header() {
   }
 
   useEffect(() => {
-    const userLangExists = getKeyByValue(langDict, language.slice(0, 2));
+    console.log("user laanguage", language);
+    const userLangExists = getKeyByValue(countryLangDict, language.slice(0, 2));
+    console.log("dictresult", userLangExists);
     if (userLangExists) {
-      setSelectLanguage(
-        userLangExists.slice(0, 1).toUpperCase() + userLangExists.slice(1)
-      );
+      setSelectedLanguage(userLangExists);
     }
+
+    Object.keys(countryLangDict).forEach((country) => console.log(country));
     // eslint-disable-next-line
   }, []);
 
@@ -68,30 +75,36 @@ export default function Header() {
           </div>
 
           <div className="select-language">
-            <InputLabel
+            <label
               id="demo-controlled-open-select-label"
               className="lang-label"
               onClick={handleOpen}
               style={{
-                padding: "5px 12px",
-                fontWeight: "600",
-                color: "#a100f2",
+                padding: "4px",
               }}
             >
-              {selectLanguage}
-            </InputLabel>
+              <img src={`countries-flags/${selectedLanguage}.svg`} alt="" />
+            </label>
             <Select
               className="hide"
               labelId="demo-controlled-open-select-label"
               id="demo-controlled-open-select"
               open={open}
-              value={selectLanguage}
+              value={selectedLanguage}
               onClose={handleClose}
               onOpen={handleOpen}
               onChange={(e) => handleChange(e.target.value)}
             >
-              <MenuItem value="English">English</MenuItem>
-              <MenuItem value="Portuguese">Portuguese</MenuItem>
+              {Object.keys(countryLangDict).map((country) => {
+                return (
+                  <MenuItem key={country} value={country}>
+                    <img
+                      src={`countries-flags/${country}.svg`}
+                      alt={country + " flag"}
+                    />
+                  </MenuItem>
+                );
+              })}
             </Select>
           </div>
         </div>
