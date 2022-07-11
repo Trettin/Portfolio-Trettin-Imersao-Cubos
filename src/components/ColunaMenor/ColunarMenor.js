@@ -1,5 +1,5 @@
 import "./ColunaMenor.css";
-import psicologia from "../../assets/images/psicologia.jpg";
+import cloudia from "../../assets/images/cloudiabot.jpg";
 import simbiose from "../../assets/images/simbiose.png";
 import cubos from "../../assets/images/cubos.png";
 import ford from "../../assets/images/ford.png";
@@ -14,6 +14,14 @@ export default function ColunaMenor() {
         <h2>{t("professional-experiences")}</h2>
         <div className="linha"></div>
         <ul>
+          <li>
+            <img src={cloudia} alt="Cloudiabot's logo" />
+            <div className="conteudo">
+              <h3>{t("developer")}</h3>
+              <span className="span">Cloudiabot</span>
+              <p className="t60">05/2022 - 06/2022</p>
+            </div>
+          </li>
           <li>
             <img src={ford} alt="Ford's logo" />
             <div className="conteudo">
@@ -36,14 +44,6 @@ export default function ColunaMenor() {
               <h3>{t("developer")}</h3>
               <span className="span">Simbiose Ventures</span>
               <p className="t60">06/2021 - 08/2021</p>
-            </div>
-          </li>
-          <li>
-            <img src={psicologia} alt="psychology symbol" />
-            <div className="conteudo">
-              <h3>{t("psychologist")} </h3>
-              <span className="span">{t("self-employed")}</span>
-              <p className="t60">2018 - 2021</p>
             </div>
           </li>
         </ul>
