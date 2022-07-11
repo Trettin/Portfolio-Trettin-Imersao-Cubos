@@ -27,7 +27,7 @@ export default function ColunaMenor() {
             <div className="conteudo">
               <h3>{t("developer")}</h3>
               <span className="span">Ford Motor Company</span>
-              <p className="t60">09/2021 - {t("current")}</p>
+              <p className="t60">09/2021 - 04/2022</p>
             </div>
           </li>
           <li>
