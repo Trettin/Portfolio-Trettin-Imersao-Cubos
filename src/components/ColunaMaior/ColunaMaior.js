@@ -22,7 +22,7 @@ export default function ColunaMaior() {
     },
     {
       name: "Java Script",
-      lvl: 60,
+      lvl: 70,
     },
     {
       name: "React",
@@ -40,12 +40,16 @@ export default function ColunaMaior() {
       lvl: 60,
     },
     {
-      name: "PostgresSQL",
+      name: "PostgreSQL",
       lvl: 60,
     },
     {
       name: "Typescript",
       lvl: 40,
+    },
+    {
+      name: "GraphQL",
+      lvl: 15,
     },
   ];
 
